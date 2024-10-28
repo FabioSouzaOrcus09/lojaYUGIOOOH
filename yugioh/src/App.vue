@@ -1,26 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="relative h-screen flex">
+    <BarraLateral /> <!-- Barra Lateral -->
+    <Home /> <!-- Conteúdo Principal -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BarraLateral from './components/BarraLateral.vue'
+import Home from './components/pages/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BarraLateral,
+    Home
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* Estilos globais (se necessário) */
 </style>
