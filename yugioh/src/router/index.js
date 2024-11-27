@@ -1,21 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../components/pages/Home.vue'; 
-import Sobre from '../components/pages/Sobre.vue';
-import Login from '../components/pages/Login.vue';
-import Decks from '../components/pages/Decks.vue';
-import Contatos from '../components/pages/Contatos.vue';
-import Compras from '../components/pages/Compras.vue';
-// Corrigir aqui: Importar o componente Produtos
-import Produtos from '../components/pages/Produtos.vue';
 
 const routes = [
-  { path: '/', name: 'Login', component: Login }, 
-  { path: '/home', name: 'Home', component: Home },
-  { path: '/decks', name: 'Decks', component: Decks },
-  { path: '/sobre', name: 'Sobre', component: Sobre },
-  { path: '/produtos', name: 'Produtos', component: Produtos }, // Produto agora está correto
-  { path: '/contatos', name: 'Contatos', component: Contatos },
-  { path: '/compras', name: 'Compras', component: Compras },
+  { path: '/', name: 'Login', component: ()=>import ('@/components/pages/Login') }, 
+  { path: '/home', name: 'Home', component: ()=> import ('@/components/pages/Home') },
+  { path: '/decks', name: 'Decks', component: ()=> import ('@/components/pages/Decks') },
+  { path: '/sobre', name: 'Sobre', component: ()=> import ('@/components/pages/Sobre') },
+  { path: '/produtos', name: 'Produtos', component: ()=> import ('@/components/pages/Produtos') }, 
+  { path: '/contatos', name: 'Contatos', component: ()=> import ('@/components/pages/Contatos')},
+  { path: '/compras', name: 'Compras', component: ()=> import ('@/components/pages/Compras')  },
 ];
 
 const router = createRouter({

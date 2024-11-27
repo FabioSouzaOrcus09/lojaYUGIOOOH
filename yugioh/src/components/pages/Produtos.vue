@@ -12,5 +12,6 @@ export default {
 </script>
 
 <style scoped>
-/* Adicione estilos aqui, se necessário */
-</style>
+.background {
+  background-image: url('@/assets/obelisco.jpeg');
+}</style>

@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>Produtos</h1>
-    <p>Esta é a página de contatos.</p>
+  <div class="flex-1 bg-cover bg-center background">
+    <p class="font-mono justify-items-center">Eu tenho que confiar no coração das cartas...</p>
+    <top-cards />
   </div>
 </template>
 
@@ -12,5 +12,5 @@ export default {
 </script>
 
 <style scoped>
-/* Adicione estilos aqui, se necessário */
+
 </style>

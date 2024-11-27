@@ -18,7 +18,7 @@
       </li>
       <li>
         <router-link 
-          to="/deck" 
+          to="/decks" 
           class="font-light hover:font-semibold transform -rotate-90">
           Decks
         </router-link>
