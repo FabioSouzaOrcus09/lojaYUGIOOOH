@@ -2,9 +2,11 @@
     <div Class="flex gap-1 grid grid-cols-4">
 
         <div id="grid1">
+            <roter-link to="Albaz">
             <img id="Albaz" src="@/assets/Decks de estrutura/Albaz.png" 
             alt="Albaz" width="135" height="180"
             class="flex object-contain hover " />
+            </roter-link>
         </div>
 
         <div id="grid2">

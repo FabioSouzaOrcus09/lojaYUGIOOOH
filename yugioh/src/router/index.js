@@ -5,7 +5,7 @@ const routes = [
   { path: '/home', name: 'Home', component: ()=> import ('@/components/pages/Home') },
   { path: '/decks', name: 'Decks', component: ()=> import ('@/components/pages/Decks') },
   { path: '/sobre', name: 'Sobre', component: ()=> import ('@/components/pages/Sobre') },
-  { path: '/produtos', name: 'Produtos', component: ()=> import ('@/components/pages/Produtos') }, 
+  { path: '/albaz', name: 'albaz', component: ()=> import ('@/components/pages/Produtos/Albaz') }, 
   { path: '/contatos', name: 'Contatos', component: ()=> import ('@/components/pages/Contatos')},
   { path: '/compras', name: 'Compras', component: ()=> import ('@/components/pages/Compras')  },
 ];
