@@ -1,13 +1,20 @@
 <template>
+
   <div class="flex-1 bg-cover bg-center backgroundD">
-    <p class="font-mono justify-items-center">Eu tenho que confiar no coração das cartas...</p>
-    <top-cards />
+    <p class="flex font-Display justify-center text-white flex-1 border-white mt-5 text-3xl"> Decks Disponíveis </p>
+    <DecksGrid />
   </div>
+
 </template>
 
 <script>
+import DecksGrid from '../DecksGrid.vue';
 export default {
   name: 'DecksB', // Nome composto para evitar erros do ESLint
+  components: {
+    DecksGrid,
+
+  }
 };
 </script>
 
