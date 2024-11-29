@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex-1 bg-cover bg-center backgroundA">
     <p>Esta é a página de produtos</p>
   </div>
 </template>
@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style scoped>
-.background {
-  background-image: url('@/assets/Blueeyes.jpg');
+<style>
+.backgroundA {
+  background-image: url('@/assets/Blueeyes.png');
 }</style>
