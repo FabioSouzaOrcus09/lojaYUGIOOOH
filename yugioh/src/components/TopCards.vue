@@ -12,15 +12,15 @@
 
       <!-- Card 1 -->
       <div class="flex flex-col items-center">
-        <img src="@/assets/card1.png" alt="card1" class="w-24 h-32 object-contain">
-        <p class="font-sans text-justify text-xs mt-1">Card Name</p>
+        <img src="@/assets/card1.png" alt="card1" class="w-24 h-32 ml-5 object-contain">
+        <p class="font-sans text-justify text-xs ml-5 mt-1">Card Name</p>
         <p class="border-b-2 border-white w-full mt-3"></p> <!-- Linha horizontal -->
       </div>
 
       <!-- Card 2 -->
       <div class="flex flex-col items-center">
-        <img src="@/assets/card2.png" alt="card2" class="w-24 h-32 object-contain">
-        <p class="font-sans text-justify text-xs mt-1">Card Name</p>
+        <img src="@/assets/card2.png" alt="card2" class="w-24 ml-5 h-32 object-contain">
+        <p class="font-sans text-justify text-xs ml-5 mt-1">Card Name</p>
         <p class="border-b-2 border-white w-full mt-3"></p> <!-- Linha horizontal -->
       </div>
     </div>

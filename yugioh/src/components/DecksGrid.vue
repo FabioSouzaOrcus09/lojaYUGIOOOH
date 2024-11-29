@@ -1,5 +1,5 @@
 <template>
-    <div Class="flex gap-1 grid grid-cols-4">
+    <div Class=" flex-auto px-16 right-96 p-px-80 grid grid-cols-4 ml-40">
 
         <div id="grid1">
             <roter-link to="Albaz">
@@ -86,5 +86,6 @@ export default {
 </script>
 
 <style scoped>
-/* Adicione estilos aqui, se necessário */
+
+
 </style>

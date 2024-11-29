@@ -1,14 +1,13 @@
 <template>
   <div 
     id="sidebar" 
-    class="absolute top-0 left-0 flex flex-col items-center gap-8 w-28
-     text-white p-4 bg-white/30 backdrop-blur h-full"
+    class="absolute top-0 left-0 flex flex-col items-center gap-8 w-28 text-white p-4 bg-white/30 backdrop-blur h-full z-50"
   >
     <!-- Logo/Icone -->
     <img src="@/assets/icon.png" alt="icon" class="w-16 h-16 mb-8"> 
 
     <!-- Lista de Botões -->
-    <ul class="flex flex-row justify-center items-center gap-10 rotate-90  ">
+    <ul class="flex flex-row justify-center items-center gap-10 rotate-90">
       <li>
         <router-link 
           to="/home" 
@@ -51,19 +50,23 @@ export default {
 /* Estilo adicional */
 #sidebar {
   border-right: 1px solid rgba(255, 255, 255, 0.3); /* Opcional: borda para destacar o sidebar */
+  z-index: 50; /* Certifica-se de que o sidebar fique acima dos outros elementos */
 }
 
 ul {
   list-style: none;
   padding: 0;
-  margin: 115px;
+  margin: 115px; /* Ajuste da margem, se necessário */
+  padding-left: 7rem; /* Adiciona padding esquerdo para dar espaço ao sidebar */
+
 }
 
 li {
   text-align: center; /* Centraliza os itens */
+  
 }
 
-a {
-  display: block; /* Garante que os links ocupem o espaço total do item */
-}
+/* Estilo opcional para o conteúdo principal para não ficar atrás da barra lateral */
+
+
 </style>
