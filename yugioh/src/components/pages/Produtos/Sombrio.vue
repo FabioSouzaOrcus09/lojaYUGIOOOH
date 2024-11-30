@@ -1,16 +1,18 @@
 <template>
     <div class="flex-1 bg-cover bg-center backgroundS">
-      <InfoProduct />
+      <InfoSombrio />
     </div>
+    
   </template>
   
   <script>
-import InfoProduct from '@/components/InfoProduct.vue';
+import InfoSombrio from '@/components/ComponentsDecks/InfoSombrio.vue';
+
   export default {
     name: 'SombrioS',
   
     components: {
-       InfoProduct,
+       InfoSombrio,
 
     }
   };
