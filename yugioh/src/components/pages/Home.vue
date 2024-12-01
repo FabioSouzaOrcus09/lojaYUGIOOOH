@@ -1,6 +1,9 @@
 <template>
   <div class="flex-1 bg-cover bg-center background">
-    <p class="font-mono justify-items-center">Eu tenho que confiar no coração das cartas...</p>
+    <p class="font-light  p-40 justify-items-center text-white">
+      Eu tenho que confiar no coração das cartas...
+    </p>
+    <p class="font-light  p-40  justify-items-center text-white"></p>
     <top-cards />
   </div>
 </template>

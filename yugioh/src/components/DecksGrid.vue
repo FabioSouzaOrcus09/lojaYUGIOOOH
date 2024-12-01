@@ -1,5 +1,5 @@
 <template>
-    <div Class="flex gap-1 grid grid-cols-4">
+    <div Class=" flex-auto px-16 right-96 p-px-80 grid grid-cols-4 ml-40">
 
         <div id="grid1">
             <roter-link to="Albaz">
@@ -74,7 +74,7 @@
             <button class="flex items-center justify-center p-0 border-0 bg-transparent cursor-pointer">
             <img id="ImperadordasTrevas" src="@/assets/Decks de estrutura/ImperadordasTrevas.png"
             alt="ImperadordasTrevas" width="135" height="180" 
-            class="flex object-contain" />
+            class="flex object-contain translate-x-[15px]" />
             </button>
         </div>
 
