@@ -1,24 +1,25 @@
 <template>
-    <div class="flex-1 bg-cover bg-center backgroundS">
-      <InfoSombrio />
-    </div>
-    
-  </template>
-  
-  <script>
+  <div class="flex-1 bg-cover bg-center backgroundC">
+    <InfoSombrio />
+  </div>
+
+</template>
+
+<script>
 import InfoSombrio from '@/components/ComponentsDecks/InfoSombrio.vue';
 
-  export default {
-    name: 'SombrioS',
-  
-    components: {
-       InfoSombrio,
+export default {
+  name: 'SombrioS',
 
-    }
-  };
-  </script>
-  
-  <style>
-  .backgroundS {
-    background-image: url('@/assets/Blueeyes.png');
-  }</style>
+  components: {
+    InfoSombrio,
+
+  }
+};
+</script>
+
+<style>
+.backgroundC {
+  background-image: url('@/assets/Blueeyes.png');
+}
+</style>

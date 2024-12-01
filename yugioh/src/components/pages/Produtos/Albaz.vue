@@ -1,16 +1,28 @@
 <template>
   <div class="flex-1 bg-cover bg-center backgroundA">
-    <p>Esta é a página de produtos</p>
+    <InfoAlbaz />
   </div>
+
 </template>
 
 <script>
+import InfoAlbaz from '@/components/ComponentsDecks/InfoAlbaz.vue';
+
+
+
 export default {
-  name: 'AlbazS', // Nome composto para evitar erros do ESLint
+  name: 'AlbazZ',
+
+  components: {
+    InfoAlbaz
+
+  }
 };
 </script>
 
 <style>
 .backgroundA {
   background-image: url('@/assets/Blueeyes.png');
-}</style>
+
+}
+</style>

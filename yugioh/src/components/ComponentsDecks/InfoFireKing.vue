@@ -1,13 +1,12 @@
 <template>
     <div class="size-80 bg-white/70 border rounded-lg mt-20 ml-52">
         <!--Alterar o tamanho da immagem aqui caso seja nescessário-->
-        <img id="Sombraneco" src="@/assets/Decks de estrutura/ConfrontoSombrio.png" alt="Sombraneco" width="300"
-            height="300" class="-translate-y-[25px] translate-x-[10px]" />
+        <img id="FireInf" src="@/assets/Decks de estrutura/FireKings.png" alt="FireInf" width="260"
+            height="260" class="translate-y-[0px] translate-x-[26px]" />
 
-        <p class="text-white text-3xl -translate-y-[40px] translate-x-[100px]">R$232,99</p>
+        <p class="text-white text-3xl translate-y-[10px] translate-x-[100px]">R$49,99</p>
 
     </div>
-
 
 
     <div
@@ -18,8 +17,7 @@
         class="bg-white absolute rounded-lg px-44 h-36 w-29 scale-x-125 scale-y-150 -translate-y-[200px] translate-x-[835px]">
     </div>
 
-    <p class="absolute font-semibold text-black text-lg -translate-y-[310px] translate-x-[800px]">Deck Estrutural - Confronto
-        Sombraneco</p>
+    <p class="absolute font-semibold text-black text-lg -translate-y-[310px] translate-x-[800px]">Deck Estrutural - Reis de Fogo</p>
     <p class="absolute font-semibold text-black text-base -translate-y-[270px] translate-x-[800px]">Informações do Produto:</p>
     <p class="absolute leading-tight text-black text-base -translate-y-[230px] translate-x-[800px]">
 
@@ -27,18 +25,16 @@
         <br>
         Conteúdo da Embalagem:<br>
         <br>
-        -39 Comuns<br>
-        -07 Super Raras<br>
-        -03 Ultra Raras<br>
-        -01 Guia de Iniciante<br>
-        -01 Tapete de Duelo de Luxo/Guia de Duelos Dupla Face<br>
+        -40 Comuns<br>
+        -03 Super Raras<br>
+        -05 Ultra Raras<br>
     </p>
 
 </template>
 
 <script>
 export default {
-    name: 'InfoSombrioS',
+    name: 'InfoFireKingI',
 
 };
 </script>
