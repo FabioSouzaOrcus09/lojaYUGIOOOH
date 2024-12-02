@@ -55,6 +55,7 @@ div#fundoImg{
 
 .login-container {
   width: 40%;
+  height: 50%;
   margin: 100px auto;
   padding: 20px;
   background-color: whitesmoke;
