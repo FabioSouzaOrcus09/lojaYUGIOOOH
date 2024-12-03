@@ -23,7 +23,7 @@ export default {
 div#imgFundo{
   width: 100vw;
   height: 100vh;
-  background: url(https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/07/yu-gi-oh-card-wallpaper.jpg) black;
+  background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d2b6afae-9d2e-43c2-a373-b9510100e868/dft8amd-38b57c35-c1b1-4c76-9c2d-514d0868df36.jpg/v1/fill/w_1280,h_790,q_75,strp/elemental_hero___instant_contact_by_aridesignz_dft8amd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzkwIiwicGF0aCI6IlwvZlwvZDJiNmFmYWUtOWQyZS00M2MyLWEzNzMtYjk1MTAxMDBlODY4XC9kZnQ4YW1kLTM4YjU3YzM1LWMxYjEtNGM3Ni05YzJkLTUxNGQwODY4ZGYzNi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.UKd94fv2PBrH4Sqh4zdSkQU5si-uGwsyMCCnW9QxxIE) black;
   background-size: 100%;
   background-position: center right;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@ div#imgFundo{
 div#conteudo{
   width: 40%;
   height: 85%;
-  margin: 50px auto;
+  margin: 45px auto;
   padding: 20px;
   font-size: 1.2em;
   background-color: whitesmoke;

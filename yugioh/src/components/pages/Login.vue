@@ -5,11 +5,11 @@
       <h1>Login</h1>
       <form @submit.prevent="login">
         <div>
-          <label for="username">Usuário:</label> 
+          <label for="username">Usuário:</label>  <br>
           <input type="text" id="username" v-model="username" required />
         </div>
         <div>
-          <label for="password">Senha:</label> 
+          <label for="password">Senha:</label>  <br>
           <input type="password" id="password" v-model="password" required />
         </div>
         <button type="submit" class="botao">Entrar</button>
@@ -55,7 +55,7 @@ div#fundoImg{
 
 .login-container {
   width: 40%;
-  height: 50%;
+  height: 60%;
   margin: 100px auto;
   padding: 20px;
   background-color: whitesmoke;
@@ -73,7 +73,7 @@ div#fundoImg{
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 label{
