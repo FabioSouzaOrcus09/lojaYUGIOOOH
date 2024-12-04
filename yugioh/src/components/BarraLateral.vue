@@ -1,7 +1,7 @@
 <template>
   <div 
     id="sidebar" 
-     class="absolute top-0 left-0 flex flex-col items-center gap-8 w-28 text-white p-4 bg-white/30 backdrop-blur h-full z-50"
+    class="absolute top-0 left-0 flex flex-col items-center gap-8 w-28 text-white p-4 bg-white/30 backdrop-blur h-full z-50"
   >
     <!-- Logo/Icone -->
     <img src="@/assets/icon.png" alt="icon" class="w-16 h-16 mb-8"> 
@@ -15,13 +15,15 @@
           Home
         </router-link>
       </li>
+
       <li>
         <router-link 
-          to="/decks" 
+          :to="decksLink" 
           class="font-light hover:font-semibold transform -rotate-90">
           Decks
         </router-link>
       </li>
+
       <li>
         <router-link 
           to="/contatos" 
@@ -29,6 +31,7 @@
           Contatos
         </router-link>
       </li>
+
       <li>
         <router-link 
           to="/sobre" 
@@ -43,6 +46,33 @@
 <script>
 export default {
   name: 'BarraLateral',
+  data() {
+    return {
+      isAdmin: false, // Controla se o usuário é admin ou não
+    };
+  },
+  computed: {
+    // Condiciona a rota de decks dependendo se o usuário é admin
+    decksLink() {
+      // Verifica se o usuário logado é administrador e retorna a URL correta
+      return this.isAdmin ? '/decks' : '/decks/cliente';
+    },
+  },
+  created() {
+    this.checkUserRole(); // Verifica o papel do usuário ao carregar o componente
+  },
+  methods: {
+    checkUserRole() {
+      // Aqui buscamos a informação do tipo de usuário armazenada no localStorage
+      const userRole = localStorage.getItem('userRole');
+      
+      if (userRole) {
+        this.isAdmin = userRole === 'admin';
+      } else {
+        this.isAdmin = false; // Se não houver informação, assume-se que é cliente
+      }
+    },
+  },
 };
 </script>
 
@@ -62,9 +92,5 @@ ul {
 
 li {
   text-align: center; /* Centraliza os itens */
-
 }
-
-  /* Estilo opcional para o conteúdo principal para não ficar atrás da barra lateral */
-
 </style>

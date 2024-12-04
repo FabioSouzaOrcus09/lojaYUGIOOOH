@@ -10,6 +10,16 @@
         <label for="password">Senha:</label>
         <input type="password" id="password" v-model="password" required />
       </div>
+
+      <!-- Seletor de tipo de usuário -->
+      <div>
+        <label for="role">Tipo de Usuário:</label>
+        <select v-model="role" id="role">
+          <option value="client">Cliente</option>
+          <option value="admin">Administrador</option>
+        </select>
+      </div>
+
       <button type="submit">Entrar</button>
     </form>
   </div>
@@ -21,15 +31,18 @@ export default {
   data() {
     return {
       username: '',
-      password: ''
+      password: '',
+      role: 'client', // Valor padrão para 'Cliente'
     };
   },
   methods: {
     login() {
-      // Simulação de autenticação simples (substitua por lógica real)
       if (this.username && this.password) {
-        // Navegar para a página /home após login bem-sucedido
-        this.$router.push('/home');
+        // Salva o papel do usuário no localStorage
+        localStorage.setItem('userRole', this.role); // Salva o papel do usuário (client/admin)
+
+        // Redireciona para a página de decks
+        this.$router.push(this.role === 'admin' ? '/decks' : '/decks/cliente');
       } else {
         alert('Por favor, preencha os campos corretamente.');
       }
@@ -39,6 +52,7 @@ export default {
 </script>
 
 <style scoped>
+/* Estilos do formulário */
 .login-container {
   width: 300px;
   margin: 0 auto;
@@ -54,7 +68,7 @@ form {
   gap: 10px;
 }
 
-input {
+input, select {
   padding: 8px;
   margin: 5px 0;
   border-radius: 4px;

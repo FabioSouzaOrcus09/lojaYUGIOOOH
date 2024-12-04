@@ -1,12 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
-  { path: '/', name: 'Login', component: () => import('@/components/pages/Login') },
+  { path: '/', name: 'Login', component: () => import('@/components/pages/Login'), meta: { requiresAuth: true, isAdmin: true }, },
   { path: '/home', name: 'Home', component: () => import('@/components/pages/Home') },
   { path: '/decks', name: 'Decks', component: () => import('@/components/pages/Decks') },
   { path: '/sobre', name: 'Sobre', component: () => import('@/components/pages/Sobre') },
   { path: '/contatos', name: 'Contatos', component: () => import('@/components/pages/Contatos') },
   { path: '/compras', name: 'Compras', component: () => import('@/components/pages/Compras') },
+  { path: '/deck/:id', name: 'DeckInfo', component: () => import('@/components/pages/DeckInfo')  , props: true, },
+  { path: '/cart', name: 'cartPage', component: () => import ('@/components/pages/CartPage') },
+  { path: '/decks/cliente', name: 'clientDecks', component: () => import('@/components/pages/ClientDecksPage.vue'), meta: { requiresAuth: true, isAdmin: false }, },
+
 
 
   { path: '/albaz', name: 'albaz', component: () => import('@/components/pages/Produtos/Albaz') },
