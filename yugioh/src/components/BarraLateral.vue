@@ -3,7 +3,7 @@
     id="sidebar" 
     class="absolute top-0 left-0 flex flex-col items-center gap-8 w-28 text-white p-4 bg-white/30 backdrop-blur h-full z-50"
   >
-    <!-- Logo/Icone -->
+    <!-- Logo/Ícone -->
     <img src="@/assets/icon.png" alt="icon" class="w-16 h-16 mb-8"> 
 
     <!-- Lista de Botões -->
@@ -40,6 +40,13 @@
         </router-link>
       </li>
     </ul>
+
+    <!-- Botão de Logout -->
+    <button 
+      @click="logout" 
+      class="absolute bottom-4 text-red-500 font-light hover:font-semibold transform">
+      Sair
+    </button>
   </div>
 </template>
 
@@ -54,23 +61,22 @@ export default {
   computed: {
     // Condiciona a rota de decks dependendo se o usuário é admin
     decksLink() {
-      // Verifica se o usuário logado é administrador e retorna a URL correta
       return this.isAdmin ? '/decks' : '/decks/cliente';
     },
   },
   created() {
-    this.checkUserRole(); // Verifica o papel do usuário ao carregar o componente
+    this.checkUserRole();
   },
   methods: {
     checkUserRole() {
-      // Aqui buscamos a informação do tipo de usuário armazenada no localStorage
+      // Verifica o papel do usuário armazenado no localStorage
       const userRole = localStorage.getItem('userRole');
-      
-      if (userRole) {
-        this.isAdmin = userRole === 'admin';
-      } else {
-        this.isAdmin = false; // Se não houver informação, assume-se que é cliente
-      }
+      this.isAdmin = userRole === 'admin';
+    },
+    logout() {
+      // Limpa as informações do localStorage e redireciona para a página de login
+      localStorage.clear();
+      this.$router.push('/');
     },
   },
 };
@@ -79,18 +85,24 @@ export default {
 <style scoped>
 /* Estilo adicional */
 #sidebar {
-  border-right: 1px solid rgba(255, 255, 255, 0.3); /* Opcional: borda para destacar o sidebar */
-  z-index: 50; /* Certifica-se de que o sidebar fique acima dos outros elementos */
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 50;
 }
 
 ul {
   list-style: none;
   padding: 0;
-  margin: 115px; /* Ajuste da margem, se necessário */
-  padding-left: 7rem; /* Adiciona padding esquerdo para dar espaço ao sidebar */
+  margin: 115px;
+  padding-left: 7rem;
 }
 
 li {
-  text-align: center; /* Centraliza os itens */
+  text-align: center;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 </style>
