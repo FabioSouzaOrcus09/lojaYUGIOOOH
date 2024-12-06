@@ -26,6 +26,10 @@ export default {
       // Exibe os componentes apenas se a rota não for "/"
       return this.$route.path !== '/';
     },
+    showComponents1() {
+      // Exibe os componentes apenas se a rota não for "/"
+      return this.$route.path !== '/cart';
+    },
   },
 };
 </script>

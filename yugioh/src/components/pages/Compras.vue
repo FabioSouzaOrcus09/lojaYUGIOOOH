@@ -7,10 +7,10 @@
 
 <script>
 export default {
-  name: 'ComprasD', // Nome composto para evitar erros do ESLint
+  name: 'ComprasD', 
 };
 </script>
 
 <style scoped>
-/* Adicione estilos aqui, se necessário */
+
 </style>

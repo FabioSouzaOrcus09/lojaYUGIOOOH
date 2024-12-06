@@ -1,27 +1,30 @@
 <template>
-  <div class="login-container">
-    <h1>Login</h1>
-    <form @submit.prevent="login">
-      <div>
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" v-model="username" required />
-      </div>
-      <div>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" v-model="password" required />
-      </div>
-
-      <!-- Seletor de tipo de usuário -->
-      <div>
-        <label for="role">Tipo de Usuário:</label>
-        <select v-model="role" id="role">
-          <option value="client">Cliente</option>
-          <option value="admin">Administrador</option>
-        </select>
-      </div>
-
-      <button type="submit">Entrar</button>
-    </form>
+  <div id="fundoImg">
+    <div class="login-container">
+      <h1>Login</h1>
+      <form @submit.prevent="login">
+        <div>
+          <label for="username">Usuário:</label>  
+          <br>
+          <input type="text" id="username" v-model="username" required />
+        </div>
+        <div>
+          <label for="password">Senha:</label>  
+          <br>
+          <input type="password" id="password" v-model="password" required />
+        </div>
+        <!-- Seletor de tipo de usuário -->
+        <div>
+          <label for="role">Tipo de Usuário:</label>  
+          <br>
+          <select v-model="role" id="role">
+            <option value="client">Cliente</option>
+            <option value="admin">Administrador</option>
+          </select>
+        </div>
+        <button type="submit" class="botao">Entrar</button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -42,49 +45,80 @@ export default {
         localStorage.setItem('userRole', this.role); // Salva o papel do usuário (client/admin)
 
         // Redireciona para a página de decks
-        this.$router.push(this.role === 'admin' ? '/decks' : '/decks/cliente');
+        this.$router.push(this.role === 'admin' ? '/home' : '/home');
       } else {
         alert('Por favor, preencha os campos corretamente.');
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
-/* Estilos do formulário */
+div#fundoImg {
+  width: 100vw;
+  height: 100vh;
+  background: url(https://c4.wallpaperflare.com/wallpaper/642/980/969/yu-gi-oh-card-hd-wallpaper-preview.jpg) black;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .login-container {
-  width: 300px;
-  margin: 0 auto;
+  width: 40%;
+  height: 60%;
+  margin: 100px auto;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: whitesmoke;
   border-radius: 8px;
+  border: 3px solid rgba(0, 0, 0, 0.808);
   text-align: center;
+}
+
+.login-container > h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 10px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+}
+
+label {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 5px;
 }
 
 input, select {
   padding: 8px;
   margin: 5px 0;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
 }
 
 button {
+  width: 50%;
+  margin: auto;
   padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
+  font-weight: 600;
+  font-size: 1.2em;
+  background-color: steelblue;
+  color: whitesmoke;
+  border: 2px solid black;
   border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #cdcf61;
+  color: black;
+  border: 3px solid steelblue;
+  font-weight: 700;
+  font-size: 1.5em;
+  transition: 1s;
 }
 </style>
